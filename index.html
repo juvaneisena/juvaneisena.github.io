@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Construzem</title>
+    <style>
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+    
+    .overlay {
+        background-color: #f7f7f7;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    
+    .loader {
+        color: #606060;
+    }
+    
+    .loader:before {
+        content: '';
+        width: 50px;
+        height: 50px;
+        border: 6px solid;
+        border-color: transparent #ccc #ccc #ccc;
+        border-radius: 100px;
+        display: block;
+        margin: 0 auto 20px;
+        -webkit-animation: roll .5s linear infinite;
+        animation: roll .5s linear infinite;
+    }
+    
+    @-webkit-keyframes roll {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes roll {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="loader">Carregando novo site...</div>
+    </div>
+</body>
+
+</html>
+
